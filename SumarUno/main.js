@@ -32,6 +32,7 @@ function mostrarDatos(arregloEntrada){
             arregloRetorno[i] = String(obtieneValor3).substring(i,i+1);
             document.write(arregloRetorno[i]);
         }    
+        
     }else{
         document.write(error);
     }
