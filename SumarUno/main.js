@@ -27,15 +27,17 @@ function mostrarDatos(arregloEntrada){
 
     if(error == "0"){
         obtieneValor3 = parseInt(obtieneValor2) + 1;
+    
+        for(i = 0; i < cantidadDigito; i++){
+            arregloRetorno[i] = String(obtieneValor3).substring(i,i+1);
+            document.write(arregloRetorno[i]);
+        }
+    
     }else{
         document.write(error);
     }
 
-    for(i = 0; i < cantidadDigito; i++){
-        arregloRetorno[i] = String(obtieneValor3).substring(i,i+1);
-        document.write(arregloRetorno[i]);
-    }
-
+    
 }
 
 mostrarDatos(V_arregloEntrada);
