@@ -1,22 +1,36 @@
-let digitos = [9,2,3,5,7];
-let ultimoDigito = digitos.length;
-const maximo = 100;
-const minimoDigito = 0;
-const maximoDigito = 9;
-if(ultimoDigito >= minimoDigito && ultimoDigito <= maximo){
-    for(i = 0; i < digitos.length; i++){
-        if(digitos[i] >= minimoDigito && digitos[i] <= maximoDigito){
-            if(i+1 == ultimoDigito){
-                document.write(digitos[i]+1);
+let V_arregloEntrada = [1,9,9];
+
+function mostrarDatos(arregloEntrada){
+    
+    const maximo = 99;
+    const minimoDigito = 0;
+    const maximoDigito = 9;
+    let cantidadDigito = arregloEntrada.length;
+    let arregloRetorno = [];
+    let obtieneValor = 0;
+    let obtieneValor2 = '';
+    let obtieneValor3 = 0;
+    let error = "0";
+
+    if(cantidadDigito >= minimoDigito && cantidadDigito <= maximo){
+        for(i = 0; i < cantidadDigito; i++){
+            if(arregloEntrada[i] >= minimoDigito && arregloEntrada[i] <= maximoDigito){
+                obtieneValor = arregloEntrada[i];
+                obtieneValor2 += obtieneValor;
             }else{
-                document.write(digitos[i]);
+                error = "No cumple con los requisitos: digito permitido de " + minimoDigito + " a " + maximoDigito;
             }
-        }else{
-            document.write("No cumple con los requisitos: valor permitido de 0 a 9");
-            i = digitos.length +1;
         }
+    }else{
+        error = "No cumple con los requisitos: valor permitido de 1 al " + maximo;
     }
-}else{
-    document.write("No cumple con los requisitos: valor permitido de 1 a 99");
+
+    if(error == "0"){
+        obtieneValor3 = parseInt(obtieneValor2) + 1;
+        document.write(obtieneValor3);
+    }else{
+        document.write(error);
+    }
 }
 
+mostrarDatos(V_arregloEntrada);
