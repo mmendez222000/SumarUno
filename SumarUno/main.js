@@ -1,4 +1,4 @@
-let V_arregloEntrada = [1,9,9];
+let V_arregloEntrada = [1,9,9,9];
 
 function mostrarDatos(arregloEntrada){
     
@@ -27,10 +27,15 @@ function mostrarDatos(arregloEntrada){
 
     if(error == "0"){
         obtieneValor3 = parseInt(obtieneValor2) + 1;
-        document.write(obtieneValor3);
     }else{
         document.write(error);
     }
+
+    for(i = 0; i < cantidadDigito; i++){
+        arregloRetorno[i] = String(obtieneValor3).substring(i,i+1);
+        document.write(arregloRetorno[i]);
+    }
+
 }
 
 mostrarDatos(V_arregloEntrada);
