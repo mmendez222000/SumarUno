@@ -1,4 +1,4 @@
-let V_arregloEntrada = [1,9,9,9];
+let V_arregloEntrada = [2,8,5,8];
 
 function mostrarDatos(arregloEntrada){
     
